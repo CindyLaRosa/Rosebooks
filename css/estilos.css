@@ -1,0 +1,185 @@
+body{
+    background-image: url("https://img.freepik.com/fotos-premium/purpura-violeta-rosa-degradado-color-abstracto-backgroud_27109-373.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+	font-family: 'Noto Sans', sans-serif;
+    margin: 0;
+  }
+
+.navbar {
+    overflow: hidden;
+    background-color: rgb(143, 44, 143);
+    
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+  
+.navbar a:hover {
+    background-color: rosybrown;
+    color: purple;
+}
+  
+
+.footer {
+    overflow: hidden;
+    background-color: rgb(143, 44, 143);
+    
+}
+
+.footer a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+  
+.footer a:hover {
+    background-color: rosybrown;
+    color: purple;
+}
+
+.box_form{	
+	width: 460px; 
+    height: auto;
+    margin: 80px auto;
+	border-radius: 10px;  
+	padding-top: 30px;
+	padding-bottom: 20px;  
+    background-color: #fbfbfb; 
+    padding-left: 30px; 
+}
+
+input{
+	background-color: #fbfbfb; 
+	width: 408px; 
+	height: 40px; 
+	border-radius: 5px;  
+	border-style: solid; 
+	border-width: 1px; 
+	border-color: #ab4493; 
+	margin-top: 10px;  
+	padding-left: 10px;
+    margin-bottom: 20px; 
+}
+
+select{
+	background-color: #fbfbfb; 
+	width: 420px; 
+	height: 40px; 
+	border-radius: 5px;  
+	border-style: solid; 
+	border-width: 1px; 
+	border-color: #ab4493; 
+	margin-top: 10px;  
+	padding-left: 10px;
+    margin-bottom: 20px; 
+}
+
+label{
+    display: block; 
+    float: center; 	
+}
+
+h1{
+	font-size: 39px;  
+	text-align: left; 
+	padding-bottom: 20px; 
+	color: #ab4493;
+}
+
+h3{
+	font-size: 16px; 
+	padding-bottom: 30px;
+	color: #0e0e0e;   
+}
+
+p{
+    font-size: 14px; 
+	color: #0e0e0e; 
+}
+
+span{
+	color: #ab4493; 
+}
+
+.aviso{
+	font-size: 13px;  
+	color: #0e0e0e;  
+}
+
+button{
+	height: 45px; 
+	padding-left: 5px;
+	padding-right: 5px; 	
+	margin-bottom: 20px; 
+	margin-top: 10px; 	
+	text-transform: uppercase;
+	border-style: solid; 
+	border-radius: 10px;	
+	width: 420px;   
+    cursor: pointer;
+}
+
+button p{
+    color: #fff; 
+}
+
+#enviar{
+	background-color: rgb(57, 57, 209); 
+	border-color:rgb(57, 57, 209); 
+}
+
+#cancelar{
+	background-color: rgb(184, 13, 13); 
+	border-color: rgb(184, 13, 13); 
+}
+
+::-webkit-input-placeholder {
+    color: #a8a8a8;
+}
+   
+::-webkit-textarea-placeholder {
+    color: #a8a8a8;
+}
+
+textarea {
+    background-color: #fbfbfb;
+    width: 405px;
+    height: 150px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #ab4493;
+    margin-top: 10px;
+    padding-left: 10px;
+    margin-bottom: 20px;
+    padding-top: 15px;
+}
+
+.form input:focus{
+	outline:0;
+	border: 1px solid skyblue;
+}
+
+
+.form textarea:focus{
+	outline:0;
+	border: 1px solid skyblue;
+}
+
+option{
+    color: darkmagenta;
+}
