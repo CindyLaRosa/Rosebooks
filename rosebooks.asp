@@ -9,12 +9,17 @@
 
 
   <!-- #include virtual="libreria/includescss.asp" -->
-  <link rel="stylesheet" type="text/css" href="css/estilos.css">
+  <link rel="stylesheet" href="css/estilos.css">
   <link rel="stylesheet" href="js/rosebooks_js.js">
+  
 
   <script>
-    alert("Bienvenido a D'Rose Books")
+  function saludo(){
+    alert("Bienvenid@ a D'Rose Books")
+  }
+  saludo()
   </script>
+
 </head>
 
 <body>
