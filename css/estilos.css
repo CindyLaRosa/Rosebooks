@@ -10,25 +10,26 @@ body{
 
 .navbar {
     overflow: hidden;
-    background-color: rgb(143, 44, 143);
+    background-color: rgb(160, 97, 160);
     
 }
 
 .navbar a {
-    float: left;
+    float: right;
     display: block;
     color: white;
     text-align: center;
-    padding: 14px 16px;
+    padding: 40px 10px;
     text-decoration: none;
     font-size: 17px;
+    width:10%;
+    margin:10 1%;
 }
   
 .navbar a:hover {
-    background-color: rosybrown;
+    background-color: skyblue;
     color: purple;
 }
-  
 
 .footer {
     overflow: hidden;
@@ -54,12 +55,14 @@ body{
 .box_form{	
 	width: 460px; 
     height: auto;
-    margin: 80px auto;
+    margin: 40px auto;
 	border-radius: 10px;  
 	padding-top: 30px;
 	padding-bottom: 20px;  
     background-color: #fbfbfb; 
     padding-left: 30px; 
+    float: center;
+    margin-right: 40px;
 }
 
 input{
@@ -98,6 +101,14 @@ h1{
 	text-align: left; 
 	padding-bottom: 20px; 
 	color: #ab4493;
+}
+
+h2{
+    text-align: left;
+    color: white;
+    margin-top: 10px;
+    padding: 25px 10px;
+    padding-bottom: 0;
 }
 
 h3{
@@ -183,3 +194,19 @@ textarea {
 option{
     color: darkmagenta;
 }
+
+section aside div{
+	border:2px solid #ab4493; 
+    float: left;
+    margin: 40px 20px 20px 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    width: 50%;
+	}
+	
+section aside div img{
+	margin:20px auto 10px 50px;
+    width: 300px;
+    height: 150px;
+	}

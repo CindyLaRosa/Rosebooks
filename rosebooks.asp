@@ -12,31 +12,40 @@
   <link rel="stylesheet" href="css/estilos.css">
   <link rel="stylesheet" href="js/rosebooks_js.js">
   
-
-  <script>
-  function saludo(){
-    alert("Bienvenid@ a D'Rose Books")
-  }
-  saludo()
-  </script>
-
 </head>
 
 <body>
 
   <!-- Inicio Navbar -->
 
-  <div class="navbar">
-    <a>Icono</a>
-    <a>Inicio</a>
-    <a>Inicio2</a>
-    <a>Inicio3</a>
 
+  <div class="navbar">
+    <a>Inicio</a>
+    <a>Nosotros</a>
+    <a>Audiolibros</a>
+    <div>
+      <h2>D'Rose Books</h2>
+    </div>
   </div>
 
   <!-- Fin Navbar -->
 
+  <!-- Fila Sección -->
+
+  <section class="row" id="seccion">
+
+    <aside class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+      <div class="col-lg-12 col-md-12 col-sm-6 col-xs-12">
+        <h1>Audiolibros</h1>
+        <h4>Cazadores de Sombras: Ciudad de Hueso</h4>
+        <img src="img/logo.jpg">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed iaculis ex. Aenean erat lacus, tempus imperdiet eros id</p>          
+      </div>
+
+  </section>
+
   <!-- Inicio formulario -->
+  
   <div class="box_form">
     <div class="form">
       <h1>Formulario de solicitud</h1>
@@ -127,12 +136,6 @@
 
   <!-- Inicio Footer -->
 
-  <div class="footer">
-    <a>Inicio</a>
-    <a>Inicio2</a>
-    <a>Inicio3</a>
-
-  </div>
 
   <!-- Fin Footer -->
 
