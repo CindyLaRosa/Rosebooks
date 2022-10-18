@@ -12,6 +12,14 @@
   <link rel="stylesheet" href="css/estilos.css">
   <link rel="stylesheet" href="js/rosebooks_js.js">
   
+<!--
+  <script>
+  function saludo(){
+    alert("Bienvenid@ a D'Rose Books")
+  }
+  saludo()
+  </script>
+-->
 </head>
 
 <body>
