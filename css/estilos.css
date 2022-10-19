@@ -33,11 +33,18 @@ body{
 
 .footer {
     overflow: hidden;
-    background-color: rgb(143, 44, 143);
+    background-color: rgb(160, 97, 160);
     
 }
 
-.footer a {
+footer ul{
+	list-style:none;
+	padding:20px;
+	font-size:18px;
+	color:#555;
+}
+
+.footer ul li {
     float: left;
     display: block;
     color: white;
@@ -122,6 +129,12 @@ h4{
     text-align: justify;
 }
 
+h5{
+    color: rgb(65, 6, 65);
+    text-align: right;
+    float: right;
+}
+
 p{
     font-size: 14px; 
 	color: black; 
@@ -200,7 +213,7 @@ option{
     color: darkmagenta;
 }
 
-section aside div{
+section aside div#audiolibros{
 	border:2px solid skyblue; 
     background: skyblue;
     border-radius: 5%;
@@ -215,7 +228,32 @@ section aside div{
 	
 section aside div img{
 	margin: auto;
+    width: 150px;
+    height: 150px;
 	}
+
+
+section aside div#nosotros{
+	border:2px solid rgb(63, 13, 109); 
+    background: rgb(63, 13, 109);
+    border-radius: 5%;
+    float: left;
+    margin: 40px 20px 20px 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    width: 50%;
+    color: white;
+}
+
+section aside div#nosotros p{
+    color: aliceblue;
+}
+
+section aside div#nosotros h1{
+    color: rgb(241, 177, 241);
+    text-align: center;
+}
 
 .radio{
     float: left;
@@ -234,3 +272,4 @@ section aside div img{
     text-align: right;
     padding: 5px;
 }
+
