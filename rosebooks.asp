@@ -12,14 +12,14 @@
   <link rel="stylesheet" href="css/estilos.css">
   <link rel="stylesheet" href="js/rosebooks_js.js">
   
-<!--
+
   <script>
   function saludo(){
     alert("Bienvenid@ a D'Rose Books")
   }
   saludo()
   </script>
--->
+
 </head>
 
 <body>
@@ -28,9 +28,9 @@
 
 
   <div class="navbar">
-    <a>Inicio</a>
-    <a>Nosotros</a>
     <a>Audiolibros</a>
+    <a>Nosotros</a>
+    <a>Inicio</a>
     <div>
       <h2>D'Rose Books</h2>
     </div>
@@ -42,12 +42,13 @@
 
   <section class="row" id="seccion">
 
-    <aside class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-      <div class="col-lg-12 col-md-12 col-sm-6 col-xs-12">
+    <aside>
+      <div>
         <h1>Audiolibros</h1>
-        <h4>Cazadores de Sombras: Ciudad de Hueso</h4>
-        <img src="img/logo.jpg">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed iaculis ex. Aenean erat lacus, tempus imperdiet eros id</p>          
+        <h3>Cazadores de Sombras: Ciudad de Hueso</h3>
+        <img src="img/CDS_1.jpg">
+        <p>Una historia oscura de amor y demonios, que entusiasmará a las seguidoras de Stephenie Meyer y L.J.Smith.
+          En el Pandemonium, la discoteca de moda de Nueva York, Clary sigue a un atractivo chico de pelo azul hasta que presencia su muerte a manos de tres jóvenes cubiertos de extraños tatuajes. Desde esa noche, su destino se une al de esos tres cazadores de sombras, guerreros dedicados a liberar a la tierra de demonios y, sobre todo, al de Jace, un chico con aspecto de ángel y tendencia a actuar como un idiota...</p>
       </div>
 
   </section>
@@ -82,7 +83,7 @@
           <option value="seleccionar"> -- Selecciona una opción --</option>
           <option value="resena">Presentar reseña de libro</option>
           <option value="recomendacion">Obtener recomendación de libro</option>
-          <option value="soporte">Soporte de facturación</option>
+          <option value="soporte">Problemas de audiolibro</option>
         </select>
       </p>
 
@@ -94,34 +95,32 @@
           placeholder="Deja aquí tu comentario..."></textarea>
       </p>
 
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-        <label class="form-check-label" for="flexRadioDefault1">
-          Default radio
-        </label>
-      </div>
-      
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-        <label class="form-check-label" for="flexRadioDefault1">
-          Default radio
-        </label>
-      </div>
+      <!--Radio Buttoms-->
+      <div class="radio">
+        <p>Seleccionar sexo
+          <span class="obligatorio">*</span>
 
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-        <label class="form-check-label" for="flexRadioDefault1">
-          Default radio
-        </label>
-      </div>
-
+				<input type="radio" name="sexo" id="hombre">
+				<label for="hombre">Hombre</label>
+		
+				<input type="radio" name="sexo" id="mujer">
+				<label for="mujer">Mujer</label>
+      </p>
+			</div>
+	
       <!--Inicio checkbox-->
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-        <label class="form-check-label" for="flexCheckDefault">
-          Default checkbox
-        </label>
-      </div>
+			<div class="checkbox">
+        <p>
+          Seleccione idioma
+          <span class="obligatorio">*</span>
+
+				<input type="checkbox" name="checkbox" id="checkbox1">
+				<label for="checkbox1">Español</label>
+
+        <input type="checkbox" name="checkbox" id="checkbox1">
+				<label for="checkbox1">Inglés</label>
+      </p>
+			</div>
       <!--Fin checkbox-->
 
       <button type="submit" name="enviar_formulario" id="enviar">
