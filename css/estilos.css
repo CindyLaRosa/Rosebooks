@@ -27,7 +27,7 @@ body{
 }
   
 .navbar a:hover {
-    background-color: skyblue;
+    background-color: rgb(135, 157, 224);
     color: purple;
 }
 
@@ -59,7 +59,7 @@ footer ul li {
 }
   
 footer li:hover {
-    background-color: skyblue;
+    background-color:rgb(135, 157, 224);
     color: purple;
 }
 
