@@ -5,20 +5,11 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rose Books</title>
-
+  <title>D'Rose Books - Inicio</title>
 
   <!-- #include virtual="libreria/includescss.asp" -->
   <link rel="stylesheet" href="css/estilos.css">
   <link rel="stylesheet" href="js/rosebooks_js.js">
-
-
-  <script>
-    function saludo() {
-      alert("Bienvenid@ a D'Rose Books")
-    }
-    saludo()
-  </script>
 
 </head>
 
@@ -44,12 +35,11 @@
     <aside>
       <div id="nosotros">
         <h1>Nosotros</h1>
-        <h3>...</h3>
-        <img src="img/logo.jpg">
+        <img id="logo" src="img/logo.jpg">
         <p>Este blog se creó para compartir audiolibros, también tenemos un canal en Youtube en donde podras
           escuchar las listas de reproducción.
         </p>
-        <p><a href="https://youtube.com/c/Drosebooks">Link a canal de youtube</a></p>
+        <p><a class="link" href="https://youtube.com/c/Drosebooks">Link a canal de youtube</a></p>
       </div>
     </aside>
   </section>
@@ -68,22 +58,23 @@
 
         <div>
           <li>
-            <a href="https://www.youtube.com/watch?v=pC_jhHF4x-0&t=2s&ab_channel=D%27rosebooks">
-            <img src="img/CDS_1.jpg">
-            </a>
-            <h5>Capitulo 1</h5>
+            <a href="https://youtu.be/pC_jhHF4x-0"><img src="img/cap1.jpg">Capitulo 1</a>
           </li>
-
-          <li><a href=""></a></li>
-          <li><a href=""></a></li>
+          <li>
+            <a href="https://youtu.be/pC_jhHF4x-0"><img src="img/cap2.jpg">Capitulo 2</a>
+          </li>
+          <li>
+            <a href="https://youtu.be/pC_jhHF4x-0"><img src="img/cap3.jpg">Capitulo 3</a>
+          </li>
         </div>
       </div>
-
+    </aside>
   </section>
 
   <!-- Inicio formulario -->
 
   <div class="box_form">
+    <button id="cerrar"><p>X</p></button>
     <div class="form" id="formulario">
       <h1>Formulario de solicitud</h1>
       <h3>Escríbeme y en breve me pondré en contacto contigo</h3>
@@ -138,16 +129,25 @@
       </div>
 
       <!--Checkbox-->
-      <div class="checkbox">
+      <div class="radio">
         <p>
           Seleccione idioma
           <span class="obligatorio">*</span>
 
-          <input type="checkbox" name="checkbox" id="checkbox1">
-          <label for="checkbox1">Español</label>
+          <input type="radio" name="checkbox" id="es">
+          <label for="espanol">Español</label>
 
-          <input type="checkbox" name="checkbox" id="checkbox1">
-          <label for="checkbox1">Inglés</label>
+          <input type="radio" name="checkbox" id="en">
+          <label for="ingles">Inglés</label>
+        </p>
+      </div>
+
+      <div class="checkbox">
+        <p>
+          <input type="checkbox" name="checkbox" id="termino">
+          He leído y acepto los términos y condiciones
+          <span class="obligatorio">*</span>
+
         </p>
       </div>
 
@@ -176,31 +176,30 @@
   <footer class="footer">
     <!--Columna izquierda Footer-->
     <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
-      <div>
         <ul>
           <li><a>Inicio</a></li>
           <li><a>Nosotros</a></li>
           <li><a>Audiolibros</a></li>
         </ul>
-      </div>
     </div>
-    <!--Columna derecha Footer-->
-    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
 
+    <!--Columna derecha Footer-->
+    <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
       <ol>
         <li>
           <a href="http://www.facebook.com" target="_blank">
             <i class="fa fa-facebook" style="font-size:24px"></i>
+            Facebook
           </a>
         </li>
 
         <li>
           <a href="http://www.youtube.com" target="_blank">
             <i class="fa fa-youtube" style="font-size:24px"></i>
+            Youtube
           </a>
         </li>
       </ol>
-
     </div>
   </footer>
   <!-- Fin Footer -->

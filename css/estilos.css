@@ -33,20 +33,24 @@ body{
 
 .footer {
     overflow: hidden;
-    background-color: rgb(160, 97, 160);
-    
+    background-color: rgb(160, 97, 160);   
 }
 
 footer ul{
-	list-style:none;
-	padding:20px;
-	font-size:18px;
-	color:#555;
+    float: center ;
+    display: inline;
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+    text-decoration: none;
+    font-size: 17px;
+    width:50%;
+    margin:10 1%;
 }
 
-.footer ul li {
+footer ul li {
     float: left;
-    display: block;
+    display: inline;
     color: white;
     text-align: center;
     padding: 14px 16px;
@@ -54,13 +58,24 @@ footer ul{
     font-size: 17px;
 }
   
-.footer a:hover {
-    background-color: rosybrown;
+footer li:hover {
+    background-color: skyblue;
     color: purple;
+}
+
+footer ol li {
+    float: right;
+    display: inline;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
 }
 
 .box_form{	
 	width: 460px; 
+    display: block;
     height: auto;
     margin: 40px auto;
 	border-radius: 10px;  
@@ -68,7 +83,6 @@ footer ul{
 	padding-bottom: 20px;  
     background-color: #fbfbfb; 
     padding-left: 30px; 
-    float: center;
     margin-right: 40px;
 }
 
@@ -98,16 +112,13 @@ select{
     margin-bottom: 20px; 
 }
 
-label{
-    display: block; 
-    float: center; 	
-}
 
 h1{
 	font-size: 39px;  
 	text-align: left; 
 	padding-bottom: 20px; 
 	color: #ab4493;
+    display: inline;
 }
 
 h2{
@@ -176,6 +187,17 @@ button p{
 	border-color: rgb(184, 13, 13); 
 }
 
+#cerrar{
+    margin-left: 85%;
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: rgb(51, 7, 51);
+    border-color: rgb(51, 7, 51);
+    border-radius: 100px;
+    width: 50px;
+    height: 50px;
+}
+
 ::-webkit-input-placeholder {
     color: #a8a8a8;
 }
@@ -214,8 +236,8 @@ option{
 }
 
 section aside div#audiolibros{
-	border:2px solid skyblue; 
-    background: skyblue;
+	border:2px solid rgb(135, 157, 224); 
+    background: rgb(135, 157, 224);
     border-radius: 5%;
     float: left;
     margin: 40px 20px 20px 20px;
@@ -227,10 +249,29 @@ section aside div#audiolibros{
 	}
 	
 section aside div img{
-	margin: auto;
-    width: 150px;
-    height: 150px;
+    margin: auto;
+    width: 180px;
+    height: 250px;
+    float: center   ;
+    display: block;
+    }
+    
+
+#logo{
+    width: 250px;
+    height: 200px;
+}
+
+section aside div li{
+	margin: auto 20px 60px auto;
+    float: left;
+    list-style: none;
 	}
+
+section aside div li img{
+    width: 200px;
+    height: 150px;
+    }
 
 
 section aside div#nosotros{
@@ -255,21 +296,35 @@ section aside div#nosotros h1{
     text-align: center;
 }
 
-.radio{
-    float: left;
-    margin: 0px;
+section aside div#nosotros a{
+    color: darkmagenta;
+    background-color: rosybrown;
+    font-style: oblique;
+    font-weight: bold;
     padding: 5px;
+} 
+
+#hombre{
+    width: 15px;
+    height: 15px;
 }
 
-.radio #hombre{
-    float: right;
-    text-align: right;
-    padding: 5px;
+#mujer{
+    width: 15px;
+    height: 15px;
 }
 
-.radio #mujer{
-    float: right;
-    text-align: right;
-    padding: 5px;
+#es{
+    width: 15px;
+    height: 15px;
 }
 
+#en{
+    width: 15px;
+    height: 15px;
+}
+
+#termino{
+    width: 18px;
+    height: 18px;
+}
