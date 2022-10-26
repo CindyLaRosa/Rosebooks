@@ -371,3 +371,16 @@ tr:hover td {
     background: #ab4493;
     color: white;
 }
+
+#detalle{
+    background: rosybrown;
+    border-color: rosybrown;
+    width: auto;
+    height: auto;
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    color: rgb(71, 7, 71);
+    font-style: bold;
+}
