@@ -74,7 +74,7 @@
 
   <!-- Inicio formulario -->
 
-  <div class="box_form">
+  <div class="box_form; col-lg-5 col-md-5 col-sm-12 col-xs-12">
     <button class="btn_cerrar" id="cerrar"><p>X</p></button>
     <div class="form" id="formulario">
       <h1>Formulario de solicitud</h1>
@@ -183,6 +183,7 @@
       <th>Sexo</th>
       <th>Idioma</th>
       <th>Términos</th>
+      <th>Detalle</th>
     </tr>
   
     <tr>
@@ -193,6 +194,11 @@
       <td></td>
       <td></td>
       <td></td>
+      <td>
+        <button type="submit" id="detalle">
+        Detalle
+        </button>
+      </td>
     </tr>
   
     <tr>
@@ -203,6 +209,11 @@
       <td></td>
       <td></td>
       <td></td>
+      <td>
+        <button type="submit" id="detalle">
+        Detalle
+        </button>
+      </td>
     </tr>
   
     <tr>
@@ -213,10 +224,25 @@
       <td></td>
       <td></td>
       <td></td>
+      <td>
+        <button type="submit" id="detalle">
+        Detalle
+        </button>
+      </td>
     </tr>
 
   </table>
 
+  <script>
+    
+    // Función detalle de línea
+    $("#detalle").click(function(){
+        var rowCount = $("#Table_id tr").length;
+        alert(rowCount); 
+        console.log("detalle");
+    });
+
+  </script>
   <!-- Inicio Footer -->
 
   <footer class="footer">
