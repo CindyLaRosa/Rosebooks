@@ -9,7 +9,8 @@
 
   <!-- #include virtual="libreria/includescss.asp" -->
   <link rel="stylesheet" href="css/estilos.css">
-  <link rel="stylesheet" href="js/rosebooks_js.js">
+  <script src="js/rosebooks_js.js"></script>
+
 
 </head>
 
@@ -74,7 +75,7 @@
   <!-- Inicio formulario -->
 
   <div class="box_form">
-    <button id="cerrar"><p>X</p></button>
+    <button class="btn_cerrar" id="cerrar"><p>X</p></button>
     <div class="form" id="formulario">
       <h1>Formulario de solicitud</h1>
       <h3>Escríbeme y en breve me pondré en contacto contigo</h3>
@@ -171,6 +172,51 @@
 
   <!-- Fin formulario -->
 
+  <!--Tabla de formulario-->
+
+  <table class="table">
+    <tr>  
+      <th>Nombre</th>
+      <th>Email</th>
+      <th>Categoría</th>
+      <th>Mensaje</th>
+      <th>Sexo</th>
+      <th>Idioma</th>
+      <th>Términos</th>
+    </tr>
+  
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+  </table>
+
   <!-- Inicio Footer -->
 
   <footer class="footer">
@@ -203,7 +249,6 @@
     </div>
   </footer>
   <!-- Fin Footer -->
-  <script src="js/rosebooks_js.js"></script>
   <!-- #include virtual="libreria/includesjs.asp" -->
 
 </body>
