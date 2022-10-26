@@ -6,7 +6,17 @@
 
 (function(){
 
-    $.box_form = function(callback){
+    $.box_form = function( opciones, callback){
+
+        opciones = $.extend({
+            
+            select:undefined,
+            
+        }, opciones);
+
+        if(opciones.select == undefined){
+            alert('Agregue otra opcion')
+        }
         
         var contenido = "";
             contenido += '<div class="box_form">';
@@ -35,6 +45,7 @@
             contenido += '<option value="resena">Presentar reseña de libro</option>';
             contenido += '<option value="recomendacion">Obtener recomendación de libro</option>';
             contenido += '<option value="soporte">Problemas de audiolibro</option>';
+            contenido += '<option value="soporte">'+ opciones.select +'</option>';
             contenido += '</select>';
             contenido += '</p>';
             contenido += '<p>';
@@ -119,21 +130,30 @@
 
     };
 
+    // Obtener select
+    const $select = $("#categoria");
+
+    // Opción cambiada 
+    function opcionCambiada() {
+        console.log("Opción cambiada");
+    }
+
+    $select.change(opcionCambiada);
+
+    // Agregar opción a select
+    function agregar() {
+        const valor = new Date().getTime();
+        $select.appendChild($("<option>", {
+            value: valor,
+            text: valor,
+        }));
+
+    }
+
+    $("#btn_agregar").click(agregar);
+
 })();
 
-
-
-/*
-document.getElementById("miSelect");
-
-const agregar = () => {
-    const option = document.createElement('option');
-    const valor = new Date().getTime();
-    option.value = valor;
-    option.text = valor;
-    $select.appendChild(option);
-};
-*/
 
 (function () {
 
