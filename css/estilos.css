@@ -245,7 +245,6 @@ section aside div#audiolibros{
     padding-right: 20px;
     text-align: center;
     width: 50%;
-    color: rgb(9, 9, 75);
 	}
 	
 section aside div img{
@@ -254,7 +253,20 @@ section aside div img{
     height: 250px;
     float: center   ;
     display: block;
-    }
+}
+
+#audiolibros p{
+    color: rgb(57, 7, 82);
+    text-align: justify;
+    line-height: 22px;
+}
+
+#audiolibros h3{
+    color: rgb(57, 7, 82);
+    text-align: center;
+    line-height: 22px;
+}
+    
     
 
 #logo{
@@ -327,4 +339,35 @@ section aside div#nosotros a{
 #termino{
     width: 18px;
     height: 18px;
+}
+
+.table{
+    width: 650px;
+    margin: 45px;
+    text-align: left;
+    border-collapse: collapse;
+    float: center;
+}
+
+th{
+    font-weight: normal;
+    padding: 8px;
+    background: #aabcfe;
+    border-top: 4px solid #aabcfe; 
+    border-bottom: 1px solid #fff;
+    color: #039;
+}
+
+td {
+    font-weight: normal;
+    padding: 8px;
+    background: #e8edff;
+    border-bottom: 1px solid #fff;
+    color: #669;
+    border-top: 1px solid transparent; 
+}
+
+tr:hover td {
+    background: #ab4493;
+    color: white;
 }
