@@ -152,6 +152,13 @@
 
     $("#btn_agregar").click(agregar);
 
+
+    // Función del botón detalle de linea
+    $("#detalle").click(function(){
+        var rowCount = $("#Table_id tr").length;
+        alert(rowCount); 
+    });
+
 })();
 
 
