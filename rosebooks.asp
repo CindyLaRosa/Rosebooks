@@ -18,7 +18,6 @@
 
   <!-- Inicio Navbar -->
 
-
   <div class="navbar">
     <a>Audiolibros</a>
     <a>Nosotros</a>
@@ -44,6 +43,7 @@
       </div>
     </aside>
   </section>
+
 
   <section class="row">
     <aside>
@@ -72,9 +72,9 @@
     </aside>
   </section>
 
-  <!-- Inicio formulario -->
 
-  <div class="box_form; col-lg-5 col-md-5 col-sm-12 col-xs-12">
+<!-- Inicio formulario -->
+  <div class="box_form">
     <button class="btn_cerrar" id="cerrar"><p>X</p></button>
     <div class="form" id="formulario">
       <h1>Formulario de solicitud</h1>
@@ -169,13 +169,12 @@
 
   </div>
 
-
   <!-- Fin formulario -->
 
   <!--Tabla de formulario-->
 
   <table class="table">
-    <tr>  
+    <tr id="head">  
       <th>Nombre</th>
       <th>Email</th>
       <th>Categoría</th>
@@ -186,46 +185,46 @@
       <th>Detalle</th>
     </tr>
   
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+    <tr id="fila1">
+      <td>Nombre 1</td>
+      <td>email1@gmail.com</td>
+      <td>Categoría 1</td>
+      <td>Mensaje 1</td>
+      <td>Femenino</td>
+      <td>Español</td>
+      <td>Si</td>
       <td>
-        <button type="submit" id="detalle">
+        <button type="submit" class="detalle">
         Detalle
         </button>
       </td>
     </tr>
   
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+    <tr id="fila2">
+      <td>Nombre 2</td>
+      <td>email2@gmail.com</td>
+      <td>Categoría 2</td>
+      <td>Mensaje 2</td>
+      <td>Femenino</td>
+      <td>Inglés</td>
+      <td>Si</td>
       <td>
-        <button type="submit" id="detalle">
+        <button type="submit" class="detalle">
         Detalle
         </button>
       </td>
     </tr>
   
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+    <tr id="fila3">
+      <td>Nombre 3</td>
+      <td>email3@gmail.com</td>
+      <td>Categoría 3</td>
+      <td>Mensaje 3</td>
+      <td>Masculino</td>
+      <td>Español</td>
+      <td>Si</td>
       <td>
-        <button type="submit" id="detalle">
+        <button type="submit" class="detalle">
         Detalle
         </button>
       </td>
@@ -236,7 +235,7 @@
   <script>
     
     // Función detalle de línea
-    $("#detalle").click(function(){
+    $(".detalle").click(function(){
         var rowCount = $("#Table_id tr").length;
         alert(rowCount); 
         console.log("detalle");
@@ -247,7 +246,7 @@
 
   <footer class="footer">
     <!--Columna izquierda Footer-->
-    <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+    <div id="footer_izq">
         <ul>
           <li><a>Inicio</a></li>
           <li><a>Nosotros</a></li>
@@ -256,7 +255,7 @@
     </div>
 
     <!--Columna derecha Footer-->
-    <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+    <div id="footer_der">
       <ol>
         <li>
           <a href="http://www.facebook.com" target="_blank">

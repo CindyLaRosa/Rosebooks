@@ -10,7 +10,7 @@
 
         opciones = $.extend({
             
-            select:undefined,
+            select: undefined
             
         }, opciones);
 
@@ -136,7 +136,7 @@
     // Opción cambiada 
     function opcionCambiada() {
         console.log("Opción cambiada");
-    }
+    };
 
     $select.change(opcionCambiada);
 
@@ -154,7 +154,7 @@
 
 
     // Función del botón detalle de linea
-    $("#detalle").click(function(){
+    $(".detalle").click(function(){
         var rowCount = $("#Table_id tr").length;
         alert(rowCount); 
     });

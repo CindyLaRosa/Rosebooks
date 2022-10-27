@@ -32,17 +32,15 @@
 
   <script>
 
-    	$("button").on("click",function(){
-        $.box_form({
+    function agregar() {
+        const valor = new Date().getTime();
+        $select.appendChild($("<option>", {
+            value: "4",
+            text: "valor",
+        }));
 
-          select: "opcion 4"
-
-        }, function(boton){
-          console.log('boton');
-        });
-      });
-
-  </script>
+    }
+    </script>
 
   <!-- #include virtual="libreria/includesjs.asp" -->
 </body>
