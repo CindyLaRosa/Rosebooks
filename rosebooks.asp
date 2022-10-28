@@ -9,7 +9,7 @@
 
   <!-- #include virtual="libreria/includescss.asp" -->
   <link rel="stylesheet" href="css/estilos.css">
-  <script src="js/rosebooks_js.js"></script>
+  <script src="js/rosebooks_js.js?v=1.01"></script>
 
 
 </head>
