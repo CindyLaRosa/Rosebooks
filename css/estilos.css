@@ -336,7 +336,7 @@ section aside div#nosotros a{
     height: 15px;
 }
 
-#termino{
+#terminos{
     width: 18px;
     height: 18px;
 }
@@ -348,24 +348,26 @@ section aside div#nosotros a{
     text-align: left;
     border-collapse: collapse;
     float: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 th{
-    font-weight: normal;
+    font-weight: bold;
     padding: 8px;
-    background: #aabcfe;
-    border-top: 4px solid #aabcfe; 
+    background: rgb(122, 63, 122);
+    border-top: 4px solid rgb(122, 63, 122);
     border-bottom: 1px solid #fff;
-    color: #039;
-    font-style: bold;
+    color: white;
+    text-align: left;
 }
 
 td {
     font-weight: normal;
     padding: 8px;
-    background: #e8edff;
+    background: #abb7e4;
     border-bottom: 1px solid #fff;
-    color: #669;
+    color: rgb(67, 22, 109);
     border-top: 1px solid transparent; 
 }
 

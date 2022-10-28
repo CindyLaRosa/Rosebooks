@@ -13,11 +13,19 @@
 
 
 </head>
+<script>
+
+  //Función saludo
+  (function saludo(){
+    alert("Bienvenid@ a D'Rose Books");
+
+  })();
+
+</script>
 
 <body>
 
   <!-- Inicio Navbar -->
-
   <div class="navbar">
     <a>Audiolibros</a>
     <a>Nosotros</a>
@@ -30,7 +38,6 @@
   <!-- Fin Navbar -->
 
   <!-- Fila Sección -->
-
   <section class="row">
     <aside>
       <div id="nosotros">
@@ -99,7 +106,7 @@
         <label for="categorias">Categoría
           <span class="obligatorio">*</span>
         </label>
-        <select name="categoria" id="categoria">
+        <select name="categoria" id="categoria" >
           <option value="seleccionar"> -- Selecciona una opción --</option>
           <option value="resena">Presentar reseña de libro</option>
           <option value="recomendacion">Obtener recomendación de libro</option>
@@ -129,7 +136,6 @@
         </p>
       </div>
 
-      <!--Checkbox-->
       <div class="radio">
         <p>
           Seleccione idioma
@@ -143,9 +149,10 @@
         </p>
       </div>
 
+      <!--Checkbox-->
       <div class="checkbox">
         <p>
-          <input type="checkbox" name="checkbox" id="termino">
+          <input type="checkbox" name="checkbox" id="terminos">
           He leído y acepto los términos y condiciones
           <span class="obligatorio">*</span>
 
@@ -172,7 +179,6 @@
   <!-- Fin formulario -->
 
   <!--Tabla de formulario-->
-
   <table class="table">
     <tr id="head">  
       <th>Nombre</th>
@@ -232,18 +238,7 @@
 
   </table>
 
-  <script>
-    
-    // Función detalle de línea
-    $(".detalle").click(function(){
-        var rowCount = $("#Table_id tr").length;
-        alert(rowCount); 
-        console.log("detalle");
-    });
-
-  </script>
   <!-- Inicio Footer -->
-
   <footer class="footer">
     <!--Columna izquierda Footer-->
     <div id="footer_izq">
@@ -274,6 +269,18 @@
     </div>
   </footer>
   <!-- Fin Footer -->
+
+<!--Funciones-->
+  <script>  
+    // Función detalle de línea
+    $(".detalle").click(function(){
+        var rowCount = $("#Table_id tr").length;
+        alert(rowCount); 
+        console.log("detalle");
+    });
+
+  </script>
+
   <!-- #include virtual="libreria/includesjs.asp" -->
 
 </body>

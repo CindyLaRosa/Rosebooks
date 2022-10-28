@@ -1,11 +1,6 @@
-//Función saludo
-(function(){
-    alert("Bienvenid@ a D'Rose Books");
-
-})();
-
 (function(){
 
+    
     $.box_form = function( opciones, callback){
 
         opciones = $.extend({
@@ -130,28 +125,18 @@
 
     };
 
-    // Obtener select
-    const $select = $("#categoria");
-
-    // Opción cambiada 
-    function opcionCambiada() {
-        console.log("Opción cambiada");
-    };
-
-    $select.change(opcionCambiada);
-
+    
     // Agregar opción a select
     function agregar() {
-        const valor = new Date().getTime();
+        const valor = "";
         $select.appendChild($("<option>", {
             value: valor,
             text: valor,
         }));
 
-    }
+     $("#btn_agregar").click(agregar);
 
-    $("#btn_agregar").click(agregar);
-
+    };
 
     // Función del botón detalle de linea
     $(".detalle").click(function(){
@@ -159,95 +144,93 @@
         alert(rowCount); 
     });
 
-})();
+    /*Tabla html
 
+    $.table = function(){
+        
+        var table = "";
+            table += '<table class="table">';
+            table += '<tr id="head">  ';
+            table += '<th>Nombre</th>';
+            table += '<th>Email</th>';
+            table += '<th>Categoría</th>';
+            table += '<th>Mensaje</th>';
+            table += '<th>Sexo</th>';
+            table += '<th>Idioma</th>';
+            table += '<th>Términos</th>';
+            table += '<th>Detalle</th>';
+            table += '</tr>';
+            table += '<tr id="fila1">';
+            table += '<td>Nombre 1</td>';
+            table += '<td>email1@gmail.com</td>';
+            table += '<td>Categoría 1</td>';
+            table += '<td>Mensaje 1</td>';
+            table += '<td>Femenino</td>';
+            table += '<td>Español</td>';
+            table += '<td>Si</td>';
+            table += '<td>';
+            table += '<button type="submit" class="detalle">';
+            table += 'Detalle';
+            table += '</button>';
+            table += '</td>';
+            table += '</tr>';
+            table += '<tr id="fila2">';
+            table += '<td>Nombre 2</td>';
+            table += '<td>email2@gmail.com</td>';
+            table += '<td>Categoría 2</td>';
+            table += '<td>Mensaje 2</td>';
+            table += '<td>Femenino</td>';
+            table += '<td>Inglés</td>';
+            table += '<td>Si</td>';
+            table += '<td>';
+            table += '<button type="submit" class="detalle">';
+            table += 'Detalle';
+            table += '</button>';
+            table += '</td>';
+            table += '</tr>';
+            table += '<tr id="fila3">';
+            table += '<td>Nombre 3</td>';
+            table += '<td>email3@gmail.com</td>';
+            table += '<td>Categoría 3</td>';
+            table += '<td>Mensaje 3</td>';
+            table += '<td>Masculino</td>';
+            table += '<td>Español</td>';
+            table += '<td>Si</td>';
+            table += '<td>';
+            table += '<button type="submit" class="detalle">';
+            table += 'Detalle';
+            table += '</button>';
+            table += '</td>';
+            table += '</tr>';
+            table += '</table>';
 
-(function () {
+    }();
+    /*
 
-    $('#formulario').on("submit", function (e) {
+    
+/* Función submit de formulario */
+    $('#formulario').on("submit", function( e ){
 
         e.preventDedault();
 
         var formulario = $(this);
         var dataSerializada = formulario.serialize();
 
-        console.log(dataSerializada);
-        /*   $.ajax({
-                   type:'GET'
-                   dataType: 'json'
-                   data: dataSerializada
-           })
-           .done(function(data){
-               console.log("Correcto");
-               console.log(data);
-           })
-           .fail(function(){
-               console.log("Fallo");
-                 */
-    });
-
-
-});
-
-/*
-
-$("#botonera a").click(function (event) {
-
-    $("#subir").show("fast");
-
-    event.preventDefault();
-
-    var hash = this.hash;
-
-    $("body").animate({
-
-        scrollTop: $(hash).offset().top
-
-    }, 400);
-
-});
-
-$("#subir a").click(function (event) {
-
-    $("#subir").hide("fast");
-
-    event.preventDefault();
-
-    var hash = this.hash;
-
-    $("body").animate({
-
-        scrollTop: $(hash).offset().top
-
-    }, 400);
-
-});
-
-
-/* Estructura función de insert
-
-(function(){
-
-    ---Se realiza cuando se carga la página
-    $(document).ready(function(){
-
         $.ajax({
             type: 'POST',
-            url: php/servicios/get.alumnnos.php',
-            dataType: 'json'
+            url: '',
+            dataType: 'json',
+            data: dataSerializada
         })
         .done(function( data ){
             console.log('Correcto');
-            console.log(data);
+            console.log( data );
 
         })
-        .fail(function)(){
+        .fail(function(){
             console.log('Fallo');
         });
 
     });
 
 })();
-
-
-*/
