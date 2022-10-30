@@ -1,17 +1,17 @@
 (function(){
 
+    $.ajax({
+
+        url: "/rosebooks_proc.asp",
+        type: "GET",
+
+    })
+    .done(function(){
+        alert("Página proceso");
+    });
     
-    $.box_form = function( opciones, callback){
+    $.box_form = function(callback){
 
-        opciones = $.extend({
-            
-            select: undefined
-            
-        }, opciones);
-
-        if(opciones.select == undefined){
-            alert('Agregue otra opcion')
-        }
         
         var contenido = "";
             contenido += '<div class="box_form">';
@@ -40,7 +40,6 @@
             contenido += '<option value="resena">Presentar reseña de libro</option>';
             contenido += '<option value="recomendacion">Obtener recomendación de libro</option>';
             contenido += '<option value="soporte">Problemas de audiolibro</option>';
-            contenido += '<option value="soporte">'+ opciones.select +'</option>';
             contenido += '</select>';
             contenido += '</p>';
             contenido += '<p>';
@@ -70,7 +69,7 @@
             contenido += '</div>';
             contenido += '<div class="checkbox">';
             contenido += '<p>';
-            contenido += '<input type="checkbox" name="checkbox" id="termino">';
+            contenido += '<input type="checkbox" name="checkbox" id="terminos">';
             contenido += 'He leído y acepto los términos y condiciones';
             contenido += '<span class="obligatorio">*</span>';
             contenido += '</p>';
@@ -89,6 +88,8 @@
 
             $("body").append( contenido);
 
+            animar_entrada();
+
     // Función del boton cerrar
     $(".btn_cerrar").on("click",function(){
         alert("Boton cerrar");
@@ -98,6 +99,7 @@
         if( typeof callback == 'function' ){
             callback('boton cerrar');
         }
+        
 
     });
 
@@ -105,7 +107,7 @@
     function animar_salida(){
 
         var $fondo = $(".box_form");
-        var $form = $(".btn_cerrar");
+        var $form = $(".form");
 
         var tl = new TimelineMax();
             tl.to( $fondo, 0.5, { opacity: 0} )
@@ -116,11 +118,38 @@
     function remover_form(){
 
         var $fondo = $(".box_form");
-        var $form = $(".btn_cerrar");
+        var $form = $(".form");
 
         $fondo.remove();
         $form.remove();
 
+    }
+
+    /*
+    $("#btn_formulario").on("click", function(){
+
+        $.box_form({
+  
+        }, function(){
+          console.log('boton mostrar formulario');
+        });
+  
+    });
+
+    */
+
+    // Animar la entrada
+    function animar_entrada(){
+        var $fondo = $(".box_form");
+        var $form = $(".form");
+
+        $fondo.show();
+        $form.show();
+
+        var tl = new TimelineMax();
+				tl.to($fondo, 0.5, { opacity: 1})
+				  .to($form, 1, { opacity: 1}, "-=0.5")
+				  .from( $form, 0.8,{y: "-=30", ease: Bounce.easeOut }, "-=0.5");
     }
 
     };
@@ -138,14 +167,8 @@
 
     };
 
-    // Función del botón detalle de linea
-    $(".detalle").click(function(){
-        var rowCount = $("#Table_id tr").length;
-        alert(rowCount); 
-    });
 
-    /*Tabla html
-
+    //Tabla html
     $.table = function(){
         
         var table = "";
@@ -169,7 +192,7 @@
             table += '<td>Español</td>';
             table += '<td>Si</td>';
             table += '<td>';
-            table += '<button type="submit" class="detalle">';
+            table += '<button type="submit" class="detalle" value="1">';
             table += 'Detalle';
             table += '</button>';
             table += '</td>';
@@ -183,7 +206,7 @@
             table += '<td>Inglés</td>';
             table += '<td>Si</td>';
             table += '<td>';
-            table += '<button type="submit" class="detalle">';
+            table += '<button type="submit" class="detalle" value="2">';
             table += 'Detalle';
             table += '</button>';
             table += '</td>';
@@ -197,15 +220,25 @@
             table += '<td>Español</td>';
             table += '<td>Si</td>';
             table += '<td>';
-            table += '<button type="submit" class="detalle">';
+            table += '<button type="submit" class="detalle" value="3">';
             table += 'Detalle';
             table += '</button>';
             table += '</td>';
             table += '</tr>';
             table += '</table>';
 
-    }();
-    /*
+            $("body").append(table);
+
+
+        // Función detalle de línea
+        $(".detalle").click(function(){
+            var x = $(this).attr("value");
+            var rowCount = $("tr")[x].id;
+            alert(rowCount); 
+        });
+
+    };
+    
 
     
 /* Función submit de formulario */
