@@ -6,22 +6,17 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>D'Rose Books - Inicio</title>
-
+  
   <!-- #include virtual="libreria/includescss.asp" -->
   <link rel="stylesheet" href="css/estilos.css">
+	<!-- Importacion del jQuery -->
+	<script src="js/lib/jquery-2.1.4.min.js"></script>
+  <script src="js/lib/TweenMax.min.js"></script>
+
   <script src="js/rosebooks_js.js?v=1.01"></script>
 
 
 </head>
-<script>
-
-  //Función saludo
-  (function saludo(){
-    alert("Bienvenid@ a D'Rose Books");
-
-  })();
-
-</script>
 
 <body>
 
@@ -80,163 +75,23 @@
   </section>
 
 
-<!-- Inicio formulario -->
-  <div class="box_form">
-    <button class="btn_cerrar" id="cerrar"><p>X</p></button>
-    <div class="form" id="formulario">
-      <h1>Formulario de solicitud</h1>
-      <h3>Escríbeme y en breve me pondré en contacto contigo</h3>
+  <!--Botón mostrar formulario-->
+	<button id="btn_formulario">Mostrar Formulario</button>
 
-      <p>
-        <label for="nombre" class="colocar_nombre">Nombre
-          <span class="obligatorio">*</span>
-        </label>
-        <input type="text" name="introducir_nombre" id="nombre" required="obligatorio" placeholder="Escribe tu nombre">
-      </p>
-
-      <p>
-        <label for="email" class="colocar_email">Email
-          <span class="obligatorio">*</span>
-        </label>
-        <input type="email" name="introducir_email" id="email" required="obligatorio" placeholder="Escribe tu Email">
-      </p>
-
-      <!--Select-->
-      <p>
-        <label for="categorias">Categoría
-          <span class="obligatorio">*</span>
-        </label>
-        <select name="categoria" id="categoria" >
-          <option value="seleccionar"> -- Selecciona una opción --</option>
-          <option value="resena">Presentar reseña de libro</option>
-          <option value="recomendacion">Obtener recomendación de libro</option>
-          <option value="soporte">Problemas de audiolibro</option>
-        </select>
-      </p>
-
-      <!--Text area-->
-      <p>
-        <label for="mensaje" class="colocar_mensaje">Mensaje
-          <span class="obligatorio">*</span>
-        </label>
-        <textarea name="introducir_mensaje" class="texto_mensaje" id="mensaje" required="obligatorio"
-          placeholder="Deja aquí tu comentario..."></textarea>
-      </p>
-
-      <!--Radio Buttoms-->
-      <div class="radio">
-        <p>Seleccionar sexo
-          <span class="obligatorio">*</span>
-
-          <input type="radio" name="sexo" id="hombre">
-          <label for="hombre">Hombre</label>
-
-          <input type="radio" name="sexo" id="mujer">
-          <label for="mujer">Mujer</label>
-        </p>
-      </div>
-
-      <div class="radio">
-        <p>
-          Seleccione idioma
-          <span class="obligatorio">*</span>
-
-          <input type="radio" name="checkbox" id="es">
-          <label for="espanol">Español</label>
-
-          <input type="radio" name="checkbox" id="en">
-          <label for="ingles">Inglés</label>
-        </p>
-      </div>
-
-      <!--Checkbox-->
-      <div class="checkbox">
-        <p>
-          <input type="checkbox" name="checkbox" id="terminos">
-          He leído y acepto los términos y condiciones
-          <span class="obligatorio">*</span>
-
-        </p>
-      </div>
-
-      <!--Buttoms-->
-      <button type="submit" name="enviar_formulario" id="enviar">
-        <p>Enviar</p>
-      </button>
-
-      <button type="submit" name="cancelar_formulario" id="cancelar">
-        <p>Cancelar</p>
-      </button>
-
-      <p class="aviso">
-        <span class="obligatorio"> (*) </span>los campos son obligatorios.
-      </p>
-
-    </div>
-
-  </div>
-
+  <!-- Inicio formulario -->
+    <script>
+      $.box_form({
+      });
+    </script>
   <!-- Fin formulario -->
 
   <!--Tabla de formulario-->
-  <table class="table">
-    <tr id="head">  
-      <th>Nombre</th>
-      <th>Email</th>
-      <th>Categoría</th>
-      <th>Mensaje</th>
-      <th>Sexo</th>
-      <th>Idioma</th>
-      <th>Términos</th>
-      <th>Detalle</th>
-    </tr>
-  
-    <tr id="fila1">
-      <td>Nombre 1</td>
-      <td>email1@gmail.com</td>
-      <td>Categoría 1</td>
-      <td>Mensaje 1</td>
-      <td>Femenino</td>
-      <td>Español</td>
-      <td>Si</td>
-      <td>
-        <button type="submit" class="detalle">
-        Detalle
-        </button>
-      </td>
-    </tr>
-  
-    <tr id="fila2">
-      <td>Nombre 2</td>
-      <td>email2@gmail.com</td>
-      <td>Categoría 2</td>
-      <td>Mensaje 2</td>
-      <td>Femenino</td>
-      <td>Inglés</td>
-      <td>Si</td>
-      <td>
-        <button type="submit" class="detalle">
-        Detalle
-        </button>
-      </td>
-    </tr>
-  
-    <tr id="fila3">
-      <td>Nombre 3</td>
-      <td>email3@gmail.com</td>
-      <td>Categoría 3</td>
-      <td>Mensaje 3</td>
-      <td>Masculino</td>
-      <td>Español</td>
-      <td>Si</td>
-      <td>
-        <button type="submit" class="detalle">
-        Detalle
-        </button>
-      </td>
-    </tr>
-
-  </table>
+  <div class="table">
+  <script>
+    $.table({
+    });
+  </script>
+  </div>
 
   <!-- Inicio Footer -->
   <footer class="footer">
@@ -271,18 +126,17 @@
   <!-- Fin Footer -->
 
 <!--Funciones-->
-  <script>  
-    // Función detalle de línea
-    $(".detalle").click(function(){
-        var rowCount = $("#Table_id tr").length;
-        alert(rowCount); 
-        console.log("detalle");
-    });
+
+  <script>
+    //Función saludo
+    (function saludo(){
+      alert("Bienvenid@ a D'Rose Books");
+
+    })();
 
   </script>
-
   <!-- #include virtual="libreria/includesjs.asp" -->
 
-</body>
 
+</body>
 </html>
