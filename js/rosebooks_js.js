@@ -92,7 +92,6 @@
 
     // Función del boton cerrar
     $(".btn_cerrar").on("click",function(){
-        alert("Boton cerrar");
 
         animar_salida();
 
@@ -227,19 +226,59 @@
             table += '</tr>';
             table += '</table>';
 
+            table += '<button class="agregarfila">Agregar fila</button>';
             $("body").append(table);
 
 
+        // Agregar filas a tabla html
+        $(".agregarfila").click(function(){
+            var x = $(".table tr").length;
+            var n = x;
+            var fila ='';
+                fila += '<tr id="fila'+ n +'">';
+                fila += '<td></td>';
+                fila += '<td></td>';
+                fila += '<td></td>';
+                fila += '<td></td>';
+                fila += '<td></td>';
+                fila += '<td></td>';
+                fila += '<td></td>';
+                fila += '<td>';
+                fila += '<button type="submit" class="detalle" value="'+ n +'">';
+                fila += 'Detalle';
+                fila += '</button>';
+                fila += '</td>';
+                fila += '</tr>';
+
         // Función detalle de línea
-        $(".detalle").click(function(){
-            var x = $(this).attr("value");
-            var rowCount = $("tr")[x].id;
-            alert(rowCount); 
+            $(".detalle").click(function(){
+                var x = $(this).attr("value");
+                var rowCount = $("tr")[x].id;
+                alert(rowCount); 
+                console.log('botón detalle');
+            });
+            
+
+            while (x > 1) { 
+                alert(x);
+                console.log(n);
+                x++;
+                n++;
+
+                if(x > 1)
+                    $("table").append(fila);
+                break;
+
+            } 
+
+
+              
         });
+
 
     };
     
-
+    
     
 /* Función submit de formulario */
     $('#formulario').on("submit", function( e ){
