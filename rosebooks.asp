@@ -32,7 +32,11 @@
 
   <!-- Fin Navbar -->
 
-  <!-- Fila Sección -->
+  <!--
+  <button type="button" id="btnProceso">Procesos</button>
+ -->
+ 
+ <!-- Fila Sección -->
   <section class="row">
     <aside>
       <div id="nosotros">
@@ -82,9 +86,10 @@
     <script>
       $.box_form({
       });
+
     </script>
   <!-- Fin formulario -->
-
+  
   <!--Tabla de formulario-->
   <div class="table">
   <script>

@@ -1,7 +1,7 @@
 <script>
 
 (function proceso(){
-  alert("Página proceso")
+  alert("Página de procesos");
 })();
 
 </script>

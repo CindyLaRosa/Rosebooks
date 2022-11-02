@@ -1,15 +1,17 @@
 (function(){
 
-    $.ajax({
+    $('#btnProceso').click(function(){
+        $.ajax({
+            url: "rosebooks_proc.asp",
+            success : function(data){
+                $('rosebooks_proc').asp(data);
+            }
+        });
 
-        url: "/rosebooks_proc.asp",
-        type: "GET",
-
-    })
-    .done(function(){
-        alert("Página proceso");
     });
-    
+
+
+
     $.box_form = function(callback){
 
         
@@ -124,7 +126,7 @@
 
     }
 
-    /*
+    
     $("#btn_formulario").on("click", function(){
 
         $.box_form({
@@ -135,7 +137,6 @@
   
     });
 
-    */
 
     // Animar la entrada
     function animar_entrada(){
@@ -151,21 +152,41 @@
 				  .from( $form, 0.8,{y: "-=30", ease: Bounce.easeOut }, "-=0.5");
     }
 
-    };
+    /* Función submit de formulario */
+    $('#enviar').on("submit", function( e ){
 
-    
+        e.preventDedault();
+
+        var formulario = $(this);
+        var dataSerializada = formulario.serialize();
+
+        $.ajax({
+            type: 'POST',
+            url: 'rosebooks.asp',
+            data: dataSerializada
+        })
+        .done(function( data ){
+            alert('Solicitud enviada');
+            console.log( data );
+
+        })
+        .fail(function(){
+            alert('Fallo');
+        });
+
+    });
+
     // Agregar opción a select
-    function agregar() {
-        const valor = "";
-        $select.appendChild($("<option>", {
-            value: valor,
-            text: valor,
-        }));
+    function agregar(){
+        var s=document.box_form.select;
+        var option=document.createElement('option');
+        option.value="Aqui va el valor";
+        option.text="Aqui va el texto";
 
-     $("#btn_agregar").click(agregar);
+        s.appendChild(option);
 
     };
-
+};
 
     //Tabla html
     $.table = function(){
@@ -249,18 +270,8 @@
                 fila += '</button>';
                 fila += '</td>';
                 fila += '</tr>';
-
-        // Función detalle de línea
-            $(".detalle").click(function(){
-                var x = $(this).attr("value");
-                var rowCount = $("tr")[x].id;
-                alert(rowCount); 
-                console.log('botón detalle');
-            });
             
-
             while (x > 1) { 
-                alert(x);
                 console.log(n);
                 x++;
                 n++;
@@ -270,39 +281,16 @@
                 break;
 
             } 
-
-
-              
+            // Función detalle de línea
+            $(".detalle").click(function(){
+                var x = $(this).attr("value");
+                var rowCount = $("tr")[x].id;
+                alert(rowCount); 
+            }); 
         });
+        
 
 
-    };
-    
-    
-    
-/* Función submit de formulario */
-    $('#formulario').on("submit", function( e ){
-
-        e.preventDedault();
-
-        var formulario = $(this);
-        var dataSerializada = formulario.serialize();
-
-        $.ajax({
-            type: 'POST',
-            url: '',
-            dataType: 'json',
-            data: dataSerializada
-        })
-        .done(function( data ){
-            console.log('Correcto');
-            console.log( data );
-
-        })
-        .fail(function(){
-            console.log('Fallo');
-        });
-
-    });
+    };  
 
 })();
